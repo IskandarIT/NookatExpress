@@ -1,5 +1,10 @@
 # NookatExpress
 
+#"NookatExpress" представляет из себя
+#"онлайн маркет плейс", наподобии AliExpress,
+#где пользователь может как продавать,
+#так и покупать товар.
+
 
 
 Mamazhanov Iskndar Ain-1-17
