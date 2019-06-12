@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Вопросы</title>
+    <link rel='stylesheet' href='/webjars/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/webjars/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<a th:href="@{/}" class="btn btn-success btn-xs">Главный</a>
+<body>
+<h1 style="color:#ff0000">Список вопросов</h1>
+<p>
+</p>
+<div class="container">
+    <div class="rows">
+        <table class="table"  table-group-flush>
+            <tr>
+                <td style="color:#0000ff" align="center">Вопрос: Как вернуть товар?</td>
+                <td></td>
+            </tr>
+            <tr th:each="vopro : ${vopros}" >
+                    <td th:text="${vopro.name}" style="color:#ff0000"></td>
+            </tr>
+        </table>
+        <p style="color:#000080" >Ответ: Если Вы купили некачественный товар в нашей сети,
+            Вы можете вернуть товар, либо обменять его на качественный. Для этого Вам необходимо
+            предъявить товар и чек администратору магазина. Если вы обнаружили брак на товаре и потеряли
+            чек, но при этом Вы совершали покупку, пользуясь накопительной картой, Вы можете связаться с сall-центром
+            нашей сети по номеру +996 312 91 06 60 и оставить заявку. В течение одного рабочего дня с
+            Вами свяжутся сотрудники отдела по работе с клиентами и помогут решить вопрос о возврате денег или обмене товара.</p>
+
+    </div>
+</div>
+</div>
+<BODY background="/image/nov.jpg"></BODY>
+</body>
+</html>

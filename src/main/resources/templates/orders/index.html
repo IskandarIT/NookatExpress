@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список заказов</title>
+    <link rel='stylesheet' href='/webjars/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+</head>
+<a th:href="@{/}" class="btn btn-success btn-xs">Главный</a>
+<body>
+<h1 style="color:#ff0000">Список заказов!!</h1>
+<p>
+
+</p>
+<div class="container">
+    <div class="rows">
+             <table class="table">
+                <tr>
+                    <td style="color:#ff0000">Name</td>
+                    <td style="color:#ff0000">Qty</td>
+                    <td style="color:#ff0000">Sum</td>
+                </tr>
+                <tr th:each="order : ${orders}" style="color:#ff0000">
+
+                    <td th:text="${order.product.name}" style="color:#ff0000">Onions</td>
+                    <td th:text="${order.Qty}" style="color:#ff0000">2.41</td>
+                 <td th:text="${order.sum}" style="color:#ff0000"> </td>
+
+                </tr>
+                 <tr th:each="prod : ${prods}">
+                     <td th:text="${prod.skidka}" style="color:#ff0000">2.41</td>
+                 </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<BODY background="/image/nov.jpg"></BODY>
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
